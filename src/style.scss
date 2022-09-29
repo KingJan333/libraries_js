@@ -1,0 +1,14 @@
+.lts {
+    text-align: center;
+    color: green;
+    font-size: 21px;
+}
+svg rect {
+  fill: rgba($color: #871ec432, $alpha: 1);
+}
+
+svg text {
+  fill: yellow;
+  font: 12px sans-serif;
+  text-anchor: end;
+}
