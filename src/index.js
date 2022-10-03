@@ -106,4 +106,43 @@ bar
   });
 
 
-  
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('result')
+  },5000)
+})
+
+myPromise
+.then((res) => {
+  console.log(res,'response')
+})
+.catch(err => console.log(err,'error'))
+.finally(() => console.log('anyway performed'))
+
+async function somethingAsync() {
+  const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('resultAsync')
+    },5000)
+  })
+  const result = await myPromise
+
+  console.log(result)
+}
+somethingAsync()
+
+try {
+
+  alert('Начало блока try');
+
+  // .. код без ошибок
+
+  alert('Конец блока try'); 
+
+} catch(e) {
+
+  alert('Блок catch не получит управление, так как нет ошибок'); 
+
+}
+
+alert("Потом код продолжит выполнение...");
